@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<string.h>
+#define length(x)  (sizeof(x) / sizeof((x)[0]))
+
+int main ()
+{
+    char a[10];
+    int loop,n,len;
+    scanf("%d",&n);
+
+    for(loop=0;loop<n;loop++)
+    {
+        scanf("%d",&a[loop]);
+    }
+
+    size_t leng = length(a);    ///this will give the out 'a[output]'
+
+    len=strlen(a);              /// this will give the number of elements in the array
+    
+    printf("%d\n",len);       //output expected 5
+    printf("%d\n",leng);      //output expected 10
+    return 0;
+}
